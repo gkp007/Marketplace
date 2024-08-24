@@ -1,0 +1,352 @@
+import {
+  AvatarImage,
+  Divider,
+  FlatList,
+  ScrollView,
+} from '@gluestack-ui/themed';
+import { AvatarFallbackText } from '@gluestack-ui/themed';
+import { Avatar } from '@gluestack-ui/themed';
+import {
+  Box,
+  Heading,
+  Text,
+  HStack,
+  VStack,
+  Pressable,
+} from '@gluestack-ui/themed';
+import { useNavigation } from '@react-navigation/native';
+import React from 'react';
+import { StatusBar } from 'react-native';
+import AppIcon, { IconProps } from '~/components/core/AppIcon';
+import useAuth from '~/hooks/useAuth';
+import { StackAndTabType } from '~/routes/private/types';
+import { COLORS } from '~/styles';
+export default function Profile() {
+  const { navigate, goBack } = useNavigation<StackAndTabType>();
+
+  function renderItem({
+    item,
+    index,
+  }: {
+    item: (typeof listData)[0];
+    index: number;
+  }) {
+    const isLastItem = index === listData.length - 1;
+
+    return (
+
+      <Pressable
+        onPress={item.onPress}
+        py={'$2'}
+        px={'$2'}
+        flexDirection="row"
+        alignItems="center"
+        justifyContent="space-between"
+        borderBottomColor="gray.200">
+        <HStack space={'xs'} alignItems="center">
+          {item.leftIcon && (
+            <HStack alignItems="center">
+              <Box rounded={'$full'} bg={'$blue50'} py={'$2'} px={'$2'}>
+                <AppIcon
+                  FeatherName={item.leftIcon?.FeatherName}
+                  size={item.leftIcon?.size}
+                  color={item.leftIcon?.color}
+                />
+              </Box>
+
+              {/* <Divider
+                  mx={'$1'}
+                  py={'$3'}
+                  orientation="vertical"
+                  bgColor="gray"
+                /> */}
+            </HStack>
+          )}
+          <VStack ml={'$3'}>
+            <Text fontSize="$md" bold >
+              {item.title}
+            </Text>
+            {/* {item.subtitle && <Text fontSize="$xs">{item.subtitle}</Text>} */}
+          </VStack>
+        </HStack>
+        <Box mr={'$4'}>
+          <AppIcon FeatherName="chevron-right" color={'blue'} size={18} />
+        </Box>
+      </Pressable>
+
+
+    );
+  }
+
+  const { logout } = useAuth();
+
+  const listData: {
+    title: string;
+    subtitle?: string;
+    avatar?: string;
+    leftIcon?: IconProps & { backgroundColor?: string };
+    isHeading?: boolean;
+    onPress?: () => void;
+  }[] = [
+      {
+        title: 'Profile Edit',
+        leftIcon: {
+          FeatherName: 'user',
+          color: COLORS.theme[600],
+          size: 25,
+          backgroundColor: '$amber400',
+        },
+        subtitle: 'Manage Profile',
+        onPress: () => navigate('ProfileDetails')
+      },
+      {
+        title: 'Favourite Business',
+        leftIcon: {
+          FeatherName: 'heart',
+          color: COLORS.theme[600],
+          size: 25,
+          backgroundColor: '$amber200',
+        },
+        // onPress: () => navigate('AllOrders')
+      },
+
+      {
+        title: 'Help',
+        leftIcon: {
+          FeatherName: 'alert-circle',
+          color: COLORS.theme[600],
+          size: 25,
+          backgroundColor: '$amber200',
+        },
+        subtitle: 'Manage Chats',
+        onPress: () => navigate('Help')
+      },
+      {
+        title: 'Rate Us',
+        leftIcon: {
+          FeatherName: 'star',
+          color: COLORS.theme[600],
+          size: 25,
+          backgroundColor: '$amber200',
+        },
+        subtitle: 'Manage Chats',
+        onPress: () => navigate('Ratings')
+      },
+      {
+        title: 'Share App',
+        leftIcon: {
+          FeatherName: 'share-2',
+          color: COLORS.theme[600],
+          size: 25,
+          backgroundColor: '$amber200',
+        },
+        subtitle: 'Manage Chats',
+        onPress: () => navigate('Services')
+      },
+      {
+        title: 'All Notifications',
+        leftIcon: {
+          FeatherName: 'bell',
+          color: COLORS.theme[600],
+          size: 22,
+          backgroundColor: '$amber200',
+        },
+        subtitle: 'Manage Language',
+        // onPress: () => navigate('Wallet')
+      },
+
+    ];
+
+  const listData2: {
+    title: string;
+    subtitle?: string;
+    avatar?: string;
+    leftIcon?: IconProps & { backgroundColor?: string };
+    isHeading?: boolean;
+    onPress?: () => void;
+  }[] = [
+      {
+        title: 'FAQ',
+        leftIcon: {
+          FeatherName: 'book',
+          color: COLORS.theme[600],
+          size: 22,
+          backgroundColor: '$amber200',
+        },
+        subtitle: 'Get help',
+        // onPress: () => navigate('Address')
+      },
+      {
+        title: 'Delete account',
+        leftIcon: {
+          FeatherName: 'delete',
+          color: 'red',
+          size: 22,
+        },
+        subtitle: 'Get help',
+        // onPress: () => navigate('Address')
+      },
+
+    ];
+
+  return (
+
+    <Box bg={'$white'} flex={1} mb={'$16'}>
+      <StatusBar animated backgroundColor={COLORS.theme[600]} />
+      <Box
+        bg={COLORS.theme[600]}
+        h={'10%'}
+      // zIndex={-1}
+      >
+        <VStack alignItems="center" space={'xs'}>
+          <Pressable
+            // justifyContent={'center'}
+            // alignItems={'center'}
+            borderWidth={'$2'}
+            borderColor={COLORS.theme[600]}
+            borderRadius={'$full'}
+
+            top={'$5'}
+          // zIndex={1}
+          >
+            <Avatar size="xl" p={'$0.5'} bg={'$white'}>
+              <AvatarFallbackText>Scissors Salon</AvatarFallbackText>
+              <AvatarImage
+                size="2xl"
+                alt="Scissors Salon"
+                source={{
+                  uri: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
+                }}
+              />
+            </Avatar>
+          </Pressable>
+        </VStack>
+      </Box>
+
+      <VStack alignItems={'center'} mt={'$12'} >
+        <Heading fontSize={'$xl'} color={COLORS.primary[600]}>
+          Madan Meher
+        </Heading>
+        <Text color={'$blueGray400'} fontSize="$xs">
+          Nayapalli, Bhubaneswar
+        </Text>
+      </VStack>
+
+
+      <ScrollView >
+
+        <Box
+          bg="white"
+          mt={'$3'}
+          py={'$2'}
+          mx={'$2'}
+          borderRadius={'$xs'}
+          borderWidth={'$1'}
+          borderColor='$coolGray300'
+          rounded={'$lg'}
+          flexDirection="row"
+          justifyContent="space-around"
+          h={'7%'}>
+          {/* Followes */}
+          <Box alignItems="center">
+            <HStack space={"md"} alignItems={'center'}>
+              <AppIcon MaterialIconsName="business-center" size={22} color={'gray'} />
+
+              <Heading fontSize={'$md'} >
+                My Business
+              </Heading>
+            </HStack>
+
+          </Box>
+
+          <Divider mr={'$4'} orientation='vertical' />
+          {/* Clint */}
+          <Box alignItems="center">
+            <HStack space={"md"} alignItems={'center'}>
+              <AppIcon FontAwesomeName="child" size={22} color={'gray'} />
+
+              <Heading fontSize={'$md'}>
+                My Post
+              </Heading>
+            </HStack>
+
+          </Box>
+          {/* Project */}
+
+        </Box>
+
+
+
+        <Box
+          bgColor="#FFF"
+          mt={'$6'}
+          p={'$2'}
+          borderWidth={'$1'}
+          borderRadius={'$md'}
+          borderColor='$coolGray300'
+          // h={'60%'}
+          mx={'$2'}
+        >
+          <FlatList
+            data={listData}
+            renderItem={renderItem}
+            keyExtractor={(item, index) => index.toString()}
+          />
+        </Box>
+
+        <Box
+          bgColor="#FFF"
+          mt={'$3'}
+          p={'$2'}
+          borderWidth={'$1'}
+          borderRadius={'$md'}
+          mb={'$4'}
+          borderColor='$coolGray300'
+          // h={'60%'}
+          mx={'$2'}
+        >
+          <FlatList
+            data={listData2}
+            renderItem={renderItem}
+            keyExtractor={(item, index) => index.toString()}
+          />
+        </Box>
+
+        <Pressable py={'$1'} borderWidth={'$1'} borderColor='$coolGray300' $pressed={{ opacity: 0.7 }} m={'$3'} bg={'white'} mx={'$3'} borderRadius={'$md'} >
+          <HStack mx={'$4'} alignItems={'center'} justifyContent={'space-between'}>
+            <HStack space={'xl'} alignItems={'center'}>
+              <Box rounded={'$full'} bg={'$blue50'} py={'$2'} px={'$2'}>
+
+                <AppIcon FeatherName="log-out" size={22} color={'blue'} />
+              </Box>
+
+              <Pressable onPress={() => logout()} >
+                <Text fontSize="$md" bold  >
+                  Logout
+                </Text>
+              </Pressable>
+            </HStack>
+            <Box mr={'$3'} >
+
+              <AppIcon
+                OcticonsName="chevron-right"
+                size={18}
+                color={'blue'}
+              />
+            </Box>
+          </HStack>
+        </Pressable>
+        <Text
+          mb={'$6'}
+          color={'$coolGray400'}
+          textAlign={'center'}
+        >
+          App version 1.02.11
+        </Text>
+
+      </ScrollView>
+
+
+    </Box>
+  );
+}
