@@ -73,7 +73,7 @@ const BusinessInfo = () => {
                                         :
                                     </Text >
                                     <Text w={'70%'}>
-                                        gkpattanaik001@gmail.com
+                                        demo@gmail.com
                                     </Text>
                                 </HStack>
                                 <HStack justifyContent='space-between'>
@@ -110,7 +110,7 @@ const BusinessInfo = () => {
 
                             <HStack justifyContent={'space-between'} alignItems={'center'}>
                                 <Heading mx={'$2'} fontSize={'$lg'} color={'$black'} >
-                                    Bank Details
+                                    Store Details
                                 </Heading>
                             </HStack>
                         </Box>
@@ -124,7 +124,7 @@ const BusinessInfo = () => {
                                         :
                                     </Text >
                                     <Text w={'70%'}>
-                                        Scissor Bro
+                                        Scissor
                                     </Text>
                                 </HStack>
                                 <HStack justifyContent='space-between'>
@@ -135,7 +135,7 @@ const BusinessInfo = () => {
                                         :
                                     </Text >
                                     <Text w={'70%'}>
-                                        Parlour
+                                        Parlour & Spa
                                     </Text>
                                 </HStack>
                                 <HStack justifyContent='space-between'>
@@ -165,56 +165,7 @@ const BusinessInfo = () => {
 
                         </VStack>
                     </Box>
-                    <Box m={'$1'} my={'$2'} borderWidth={'$1'} borderColor='$coolGray300' borderRadius={'$xl'}>
-                        <Box bg={'$blue50'} borderTopLeftRadius={'$xl'} borderTopRightRadius={'$xl'}>
 
-                            <HStack justifyContent={'space-between'} alignItems={'center'}>
-                                <Heading mx={'$2'} fontSize={'$lg'} color={'$black'} >
-                                    Store Details
-                                </Heading>
-                            </HStack>
-                        </Box>
-                        <VStack space='3xl' borderRadius={'$sm'} p={'$3'} >
-                            <VStack space={'lg'}>
-                                <HStack justifyContent='space-between'>
-                                    <Text fontSize={'$md'} bold w={'25%'}  >
-                                        Bank Name
-                                    </Text>
-                                    <Text w={'5%'}>
-                                        :
-                                    </Text >
-                                    <Text w={'70%'}>
-                                        State Bank of India
-                                    </Text>
-                                </HStack>
-                                <HStack justifyContent='space-between'>
-                                    <Text fontSize={'$md'} bold w={'25%'}  >
-                                        IFSC code
-                                    </Text>
-                                    <Text w={'5%'}>
-                                        :
-                                    </Text >
-                                    <Text w={'70%'}>
-                                        SBIN0001133
-                                    </Text>
-                                </HStack>
-                                <HStack justifyContent='space-between'>
-                                    <Text fontSize={'$md'} bold w={'25%'}  >
-                                        Account Number
-                                    </Text>
-                                    <Text w={'5%'}>
-                                        :
-                                    </Text >
-                                    <Text w={'70%'}>
-                                        9177520582263
-                                    </Text>
-                                </HStack>
-
-
-                            </VStack>
-
-                        </VStack>
-                    </Box>
                     {/* <Box my={'$5'}>
                             <Btn
                                 bg={COLORS.theme[600]}

@@ -152,7 +152,7 @@ export default function Profile() {
           backgroundColor: '$amber200',
         },
         subtitle: 'Manage Language',
-        // onPress: () => navigate('Wallet')
+        onPress: () => navigate('Notification')
       },
 
     ];

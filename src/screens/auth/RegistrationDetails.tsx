@@ -51,7 +51,7 @@ const BusinessInfo = () => {
 
 
     return (
-        <PrivateContainer title={'Owner Details'}>
+        <PrivateContainer title={'Profile Details'}>
 
             <Box m={'$2'} backgroundColor='$white' flex={1}>
 
@@ -127,29 +127,7 @@ const BusinessInfo = () => {
                                     control={control}
                                     errorMessage={errors?.[`email`]?.message}
                                 />
-                                <AppInput
-                                    key={`phone`}
-                                    input={{
-                                        key: `name`,
-                                        label: 'Mobile Number',
-                                        color: '$white',
-                                        placeholder: 'Enter your mobile number',
-                                        icon: { FeatherName: 'phone' },
-                                        rules: {
-                                            required: 'Name is required',
-                                            pattern: {
-                                                minLength: 5,
-                                            },
-                                        },
-                                        inputProps: {
-                                            autoCapitalize: 'none',
-                                            marginBottom: '2',
 
-                                        },
-                                    }}
-                                    control={control}
-                                    errorMessage={errors?.[`phone`]?.message}
-                                />
                             </VStack>
                         </Box>
 

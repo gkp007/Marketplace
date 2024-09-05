@@ -183,7 +183,7 @@ export default function Home() {
     const SERVICES_BY = [
         { name: 'Sumanta Behera', duration: 13 },
         { name: 'Motilal Nayak', duration: 18 },
-        { name: 'Amulya Behera', duration: 29 }
+        { name: 'Madan Meher', duration: 29 }
     ];
 
     return (

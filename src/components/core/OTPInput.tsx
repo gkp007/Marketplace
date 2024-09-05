@@ -41,6 +41,7 @@ export default function OtpInput({
                 {[...new Array(length)].map((item, index) => (
                     <Input key={index}>
                         <InputField
+                            bg={'$blue100'}
                             ref={ref => {
                                 if (ref && !inputRefs.current.includes(ref)) {
                                     inputRefs.current.push(ref);

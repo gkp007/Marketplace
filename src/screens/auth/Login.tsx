@@ -120,7 +120,7 @@ export default function Login(): JSX.Element {
       <VStack my={'$2'} justifyContent={'space-between'} >
         <Box px="$4">
           <Heading fontSize={'$xl'} color={'black'}>
-            Login/Register with Combber
+            Login/Register with Marketplace
           </Heading>
 
           <Text fontSize={'$xs'} color={'blue.500'}>

@@ -19,7 +19,7 @@ const transactionDataArray = [
         date: '02-05-2024',
     },
     {
-        name: 'Amulya Behera',
+        name: 'Madan Meher',
         service: 'Facial',
         amount: 900,
         date: '03-05-2024',
@@ -37,7 +37,7 @@ const transactionDataArray = [
         date: '02-05-2024',
     },
     {
-        name: 'Amulya Behera',
+        name: 'Madan Meher',
         service: 'Facial',
         amount: 900,
         date: '03-05-2024',
@@ -49,7 +49,7 @@ const transactionDataArray = [
         date: '02-05-2024',
     },
     {
-        name: 'Amulya Behera',
+        name: 'Madan Meher',
         service: 'Facial',
         amount: 900,
         date: '03-05-2024',

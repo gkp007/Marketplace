@@ -100,7 +100,7 @@ const Help = () => {
                                 Write us at
                             </Text>
                             <Heading bold fontSize={'$md'} w={'100%'} mr="auto" >
-                                demo@combbers.com
+                                demo@gmail.com
                             </Heading>
                         </VStack>
                     </HStack>

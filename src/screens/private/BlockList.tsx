@@ -5,7 +5,7 @@ import { StackAndTabType } from '~/routes/private/types';
 import { useNavigation } from '@react-navigation/native';
 
 const transactionData = [
-    { name: 'Amulya Behera', mobile: 775462132 },
+    { name: 'Madan Meher', mobile: 775462132 },
     { name: 'John Doe', mobile: 123456789 },
     { name: 'Jane Smith', mobile: 987654321 },
 ];

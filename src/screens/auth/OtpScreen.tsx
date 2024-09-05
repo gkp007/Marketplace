@@ -101,11 +101,11 @@ export default function OTPVerification({ route: { params } }: Props): JSX.Eleme
     };
 
     return (
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView showsVerticalScrollIndicator={false} flex={1} bg={'$white'}>
             <VStack
                 justifyContent='space-between'
                 h="$full"
-                bg={'white'}>
+            >
                 <Image
                     w="$56"
                     h="$80"

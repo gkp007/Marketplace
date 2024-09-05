@@ -29,23 +29,23 @@ const Notifications = () => {
     const dummyData = [
         {
             id: '1',
-            title: 'Appointment Reminder',
-            description: 'Your appointment with Barber Joe is scheduled for tomorrow at 10:00 AM.',
+            title: 'Big Discounts',
+            description: '50% discount is live on India-mart valid till 10th Sept.',
         },
         {
             id: '2',
-            title: 'Appointment Confirmed',
-            description: 'Your appointment with Barber Alex has been confirmed for next Friday at 2:00 PM.',
+            title: 'Festive season sale',
+            description: 'Hurry!!! Biggest sale of the year starting from 12th sept.',
         },
         {
             id: '3',
-            title: 'New Appointment Request',
-            description: 'You have a new appointment request from John Doe for next Saturday at 11:30 AM.',
+            title: 'Black Friday sale',
+            description: 'Now avail 30% discount on premium product. Min price 1999.',
         },
         {
             id: '4',
-            title: 'Appointment Cancellation',
-            description: 'Your appointment with Barber Smith has been cancelled. Please reschedule if needed.',
+            title: 'New Offers',
+            description: 'Avail 50% + 50% discount on our selected outlet'
         },
         {
             id: '5',
@@ -53,6 +53,7 @@ const Notifications = () => {
             description: 'Don\'t forget to leave a review for your recent appointment with Barber Sam!',
         },
     ];
+
 
 
 

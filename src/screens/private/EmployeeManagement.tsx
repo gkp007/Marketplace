@@ -27,7 +27,7 @@ const employeeDataArray = [
         totalBookings: 916,
     },
     {
-        name: 'Amulya Behera',
+        name: 'Madan Meher',
         experience: '0 year 9 months',
         rating: 4.2,
         status: 'Active',

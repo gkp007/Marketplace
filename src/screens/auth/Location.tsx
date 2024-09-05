@@ -31,7 +31,7 @@ export default () => {
     } = useForm<FormData>();
 
     return (
-        <PrivateContainer title={'Add your store location'}>
+        <PrivateContainer title={'Add your location'}>
 
             {/* <PrivateContainer title={'Enter your business location'}> */}
             <VStack mx={'$2'} space={'2xl'} bg={'$white'}>
@@ -76,7 +76,7 @@ export default () => {
 
                 <VStack p={'$3'} space={'sm'}>
                     <HStack justifyContent='space-between' alignItems='center' >
-                        <Heading color={'$blue700'} fontSize={'$lg'} bold> Is the pin is in right store location ?</Heading>
+                        <Heading color={'$blue700'} fontSize={'$lg'} bold> Is the pin is in right location ?</Heading>
                         <AppIcon EvilIconsName='location' size={25} color={'black'} />
                     </HStack>
 
@@ -86,7 +86,7 @@ export default () => {
                         <Box m={'$2'} >
                             <VStack space={'xs'} >
                                 <Text fontSize={'$sm'} color={'$black'} bold>
-                                    Scissor Bro, Plot 654/23, 2nd lane
+                                    Scissor, Plot 654/23, 2nd lane
                                 </Text>
                                 <Text fontSize={'$sm'} color={'$black'} bold>
                                     Nayapalli, 751005
@@ -107,7 +107,7 @@ export default () => {
                 <VStack p={'$3'} space={'sm'} borderWidth={'$1'} borderColor={'$blue100'} backgroundColor='$white' borderRadius={'$xl'}>
 
                     <HStack justifyContent='space-between' alignItems='center' >
-                        <Heading fontSize={'$lg'} color={'$blue700'} bold> Selected store location</Heading>
+                        <Heading fontSize={'$lg'} color={'$blue700'} bold> Selected location</Heading>
                         <Pressable onPress={() => navigate('AllBookings')}>
                             <HStack alignItems='center' space={'xs'} bg={'$blue50'} borderRadius={'$sm'} p={'$1'} >
                                 <Text fontSize={'$sm'} color={'$black'} bold>
@@ -124,7 +124,7 @@ export default () => {
                         <Box m={'$2'} >
                             <VStack space={'xs'} >
                                 <Text fontSize={'$sm'} color={'$black'} bold>
-                                    Scissor Bro, Plot 654/23, 2nd lane
+                                    Scissor, Plot 654/23, 2nd lane
                                 </Text>
                                 <Text fontSize={'$sm'} color={'$black'} bold>
                                     Nayapalli, 751005
